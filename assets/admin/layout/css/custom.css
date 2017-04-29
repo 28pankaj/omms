@@ -1,0 +1,141 @@
+.switchCheckbox > div.checker,
+div.checker span,
+div.checker input {
+    display: none!important;
+}
+
+.tabbable-line .form-group {
+    display: inline-flex;
+}
+
+.tabbable-line label {
+    line-height: 2.3;
+}
+
+.full-btn-width {
+    width: 100%;
+}
+
+.list-view td {
+    /*padding: 15px;*/
+    text-transform: capitalize;
+    border-top: 0px!important;
+    /* padding:15px!important; */
+}
+
+.list-view .table-scrollable {
+    border: 0px !important;
+}
+
+.list-view th {
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    font-size: 11px!important;
+}
+
+.unitTbody {
+    cursor: pointer;
+}
+
+.unitTbody td i {
+    /*line-height: 2.4;*/
+    padding: 5px;
+    font-size: 17px;
+}
+
+.sub-data-td .row {
+    padding: 15px;
+}
+
+.box-shadow {
+    border: 1px solid transparent!important;
+    -webkit-box-shadow: 0 3px 7px 0 #a8a8a8!important;
+    -moz-box-shadow: 0 3px 7px 0 #a8a8a8!important;
+    box-shadow: 0 3px 7px 0 #a8a8a8!important;
+}
+
+.subkeysValues h4 > b {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.subkeysValues h4 > span {
+    color: #d6b897 !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gridView .image-box {
+    margin-top: 10%;
+}
+
+
+/*start tile-view css*/
+
+.tileViewBox-head h5 {
+    text-align: left;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.tileViewBox-head b {}
+
+.image-box {
+    border-top: 1px solid #ddd;
+}
+
+.tileViewBox-head h5 span {
+    color: #181818 !important;
+    font-weight: 400;
+}
+
+.tileViewBox-content.location-content {
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.tileViewBox-content.location-content li {
+    padding: 15px;
+    background: #f2f2f2;
+    text-align: left;
+}
+
+.tileViewBox-content.location-content li > b {
+    color: #000;
+    font-size: 15px;
+}
+
+.tileViewBox-content.location-content > li > span {
+    color: #181818;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.tileViewBox-content.keyValue-section > li {
+    text-transform: capitalize;
+    border: 1px solid #e7e7e7;
+}
+
+.tileViewBox-content.keyValue-section > li > b {
+    font-size: 14px;
+}
+
+.tileViewBox-content.keyValue-section > li > span {
+    color: #d6b897 !important;
+    font-size: 14px;
+}
+
+.carrot-orange.btn {
+    background-color: #f7931e;
+    border: 1px solid #ddd;
+    color: #fff;
+}
+
+.green-persian.btn {
+    background-color: #00a99d;
+    color: #fff;
+    border: 1px solid #ddd;
+}
+
+
+/*end tile-view css*/

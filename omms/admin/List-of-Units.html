@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>OMMS Dashboard Design by 72-pixels </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/plugins/bootstrap-switch/css/angular-ui-switch.css" rel="stylesheet" type="text/css">
+<!-- <link href="../../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/> -->
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+<link href="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../../assets/global/plugins/select2/select2.css"/>
+<link rel="stylesheet" type="text/css" href="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-datepicker/css/datepicker.css"/>
+<!-- END PAGE LEVEL PLUGIN STYLES -->
+<!-- BEGIN THEME STYLES -->
+<!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+<link href="../../assets/global/css/tileViewBox-table.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="../../assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+<body class="page-header-fixed  page-style-square" ng-app="unitListApp" ng-cloak>
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index2.html">
+			<img src="../../assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
+			</a>
+			<div class="menu-toggler sidebar-toggler hide">
+				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+			</div>
+		</div>
+		<!-- END LOGO -->
+       <div class="page-logo">
+			<a href="index2.html">
+			<img src="../../assets/admin/layout/img/pop-logo.png" alt="logo" class="logo-default2"/>
+			</a>
+			
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
+			<ul class="nav navbar-nav pull-right">
+				
+				<li class="dropdown dropdown-user">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<img alt="" class="img-circle" src="../../assets/admin/layout/img/avatar3_small.jpg"/>
+					<span class="username username-hide-on-mobile">
+					Nick </span>
+					<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-default">
+						<li>
+							<a href="#">
+							<i class="icon-user"></i> My Profile </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-calendar"></i> My Calendar </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-envelope-open"></i> My Inbox <span class="badge badge-danger">
+							3 </span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
+							7 </span>
+							</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="index3.html">
+							<i class="icon-lock"></i> Lock Screen </a>
+						</li>
+						<li>
+							<a href="index.html">
+							<i class="icon-key"></i> Log Out </a>
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- END TOP NAVIGATION MENU -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<ul class="page-sidebar-menu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+				<li class="sidebar-toggler-wrapper">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler">
+					</div>
+					<!-- END SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+				<li class="sidebar-search-wrapper">
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+					<form class="sidebar-search " action="#" method="POST">
+						<a href="javascript:;" class="remove">
+						<i class="icon-close"></i>
+						</a>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search...">
+							<span class="input-group-btn">
+							<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+							</span>
+						</div>
+					</form>
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				<li class="start ">
+					<a href="javascript:;">
+					<i class="icon-home"></i>
+					<span class="title">Dashboard</span>
+					
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="javascript:;">
+							<i class="icon-home"></i>
+							Home<span class="arrow"></span></a>
+                            <ul class="sub-menu">
+								<li>
+									<a href="index2.html">
+									<i class="icon-user"></i>
+									Current Status
+									</a></li>
+                                <li>
+									<a href="#">
+									<i class="icon-user"></i>
+									Unit Map
+									</a></li></ul>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-bar-chart"></i>
+							Gantt Chart</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-graph"></i>
+							Company At glance</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-user"></i>
+					<span class="title">Vendors</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+							<i class="icon-home"></i>
+							List Of Vendors</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-basket"></i>
+							Add Vendors</a>
+						</li>
+						
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-rocket"></i>
+					<span class="title">Customer</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+							List of Customer</a>
+						</li>
+						<li>
+							<a href="#">
+							Add customer</a>
+						</li>
+						<li>
+							<a href="#">
+							Add Billing Information</a>
+						</li>
+						<li>
+							<a href="#">
+							Negotiated Rate</a>
+						</li>
+						
+						
+					</ul>
+				</li>
+				<li class="start active open">
+					<a href="javascript:;">
+					<i class="icon-diamond"></i>
+					<span class="title">Unit</span>
+					<span class="selected"></span>
+					<span class="arrow open"></span>
+					</a>
+					<ul class="sub-menu">
+						<li class="active">
+							<a href="#">
+							List of Unit</a>
+						</li>
+						<li>
+							<a href="#">
+							Add Unit</a>
+						</li>
+						<li>
+							<a href="#">
+							Budget</a>
+						</li>
+						
+						<li>
+							<a href="#">
+							Miscellenaous</a>
+						</li>
+						
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-puzzle"></i>
+					<span class="title">Booking</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+							List of Booking</a>
+						</li>
+						<li>
+							<a href="#">
+							Add Booking</a>
+						</li>
+						
+					</ul>
+				</li>
+			
+				
+				<li >
+					<a href="javascript:;">
+					<i class="icon-settings"></i>
+					<span class="title">Media Planning</span>
+                    
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub-menu">
+						<li >
+							<a href="list-of-proposals.html">
+							List of Proposals</a>
+						</li>
+						<li>
+							<a href="add-proposals.html">
+							Add Proposals</a>
+						</li>
+						
+						
+					</ul>
+				</li>
+                
+				<li>
+					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
+					<span class="title">Operations</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+							List of Operations</a>
+						</li>
+						
+					</ul>
+				</li><li class="heading">
+					<h3 class="uppercase">ADMINISTRATOR</h3>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-wallet"></i>
+					<span class="title">Default Administrator</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+							Add User</a>
+						</li>
+						
+						
+						<li>
+							<a href="#">
+							Add Group</a>
+						</li>
+						<li>
+							<a href="#">
+							Task</a>
+						</li>
+                        <li>
+							<a href="#">
+							Tax Computation</a>
+						</li>
+                        <li>
+							<a href="#">
+							Configuration</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-bar-chart"></i>
+					<span class="title">Accounts</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+							Initial Invoice</a>
+						</li>
+						<li>
+							<a href="#">
+							Outstanding Detail </a>
+						</li>
+                        <li>
+							<a href="#">
+							Receipt </a>
+						</li>
+                        <li>
+							<a href="#">
+							Outstanding Summary</a>
+						</li>
+                        <li>
+							<a href="#">
+							Invoice Management </a>
+						</li>
+                         <li>
+							<a href="#">
+							Payables</a>
+						</li>
+                        <li>
+							<a href="#">
+							Misc. Expenses</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-docs"></i>
+					<span class="title">Reports</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+							Unit vacancy</a>
+						</li>
+                        <li>
+							<a href="#">
+							Unit Availability</a>
+						</li>
+                        <li>
+							<a href="#">
+							Extend Booking</a>
+						</li>
+                        <li>
+                        
+							<a href="#">
+							Customer Information</a>
+						</li>
+						<li>
+							<a href="#">
+							
+							Occupancy Status</a>
+						</li>
+                        <li>
+							<a href="#">
+							
+							Source of Business</a>
+						</li>
+                        <li>
+							<a href="#">
+							
+							Address Information</a>
+						</li>
+                        <li>
+							<a href="#">
+							
+							Unit Lease Expiration</a>
+						</li>
+                        <li>
+							<a href="#">
+							
+							Vendor Commission </a>
+						</li>
+						
+						<li>
+							<a href="#">
+							
+							Inventory Status</a>
+						</li>
+						<li>
+							<a href="#">
+							
+							User Activity</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+				<li>
+					<a href="#">
+					<i class="icon-folder"></i>
+					<span class="title">Doc Management</span></a></li>
+				</ul>
+				</li>
+				
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content" ng-controller="list_view_ctrl">
+                <!-- END EXAMPLE TABLE PORTLET-->
+                <div class="portlet light bordered list-view">
+                    <div class="portlet-title">
+                        <!-- <div class="col-md-6"> -->
+                        <div class="caption">
+                            List Of Units
+                        </div>
+                        <div class="col-md-3 col-md-offset-8">
+                            <select name="filter" class="bs-select form-control" id="filter" ng-model="filter" ng-options="city for city in cities" ng-change="changeFilter()">
+                                <option value="" selected="">Select City</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 tabbable-line">
+                            <div class="form-group">
+                                <label>Tile&nbsp;</label>
+                                <switch name="layoutChoose" ng-model="layoutChoose" class="switchCheckbox"></switch>
+                                <label>&nbsp;Grid</label>
+                                <!-- on="Grid" off="Tile"  -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portlet-body" ng-if="layoutChoose==true">
+                        <div class="col-md-2 col-sm-2 col-xs-1" style="display:inline-flex; line-height: 1.8;">
+                            Show&nbsp;
+                            <select class="bs-select form-control" ng-model="viewby" ng-change="setItemsPerPage(viewby)" style="height: 23px; padding: 0px;">
+                                <option value=3>3</option>
+                                <option value=5>5</option>
+                                <option value=10>10</option>
+                                <option value=20>20</option>
+                                <option value=30>30</option>
+                                <option value=40>40</option>
+                                <option value=50>50</option>
+                            </select>&nbsp;Entries
+                        </div>
+                        <div class="col-md-3 col-md-offset-7 col-sm-3 col-sm-offset-6 col-xs-12 col-xs-offset-0" style="margin-bottom: 15px;">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                                <input type="text" placeholder="Search.." ng-model="search" class="form-control" />
+                            </div>
+                        </div>
+                        <p class="lead" ng-show="(tableRespModel.listViewData | filter:search).length == 0">No Data Found !</p>
+                        <div class="row">
+                                <div class="col-md-12 gridView">
+                                    <div class="table-scrollable">
+                                        <table class="table table-hover table-cust" ng-model="list_View_table">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                    </th>
+                                                    <th>
+                                                        Nos
+                                                    </th>
+                                                    <th>
+                                                        Unit DocketId
+                                                    </th>
+                                                    <th>
+                                                        Unit Code
+                                                    </th>
+                                                    <th>
+                                                        Location
+                                                    </th>
+                                                    <th>
+                                                        Type
+                                                    </th>
+                                                    <th>
+                                                        Material
+                                                    </th>
+                                                    <th>
+                                                        Total SqFt
+                                                    </th>
+                                                    <th>
+                                                        Rate/SqFt
+                                                    </th>
+                                                    <th>
+                                                        Monthly Charges
+                                                    </th>
+                                                    <th>
+                                                        Availability
+                                                    </th>
+                                                    <th>
+                                                        Display
+                                                    </th>
+                                                    <th>
+                                                        Occupancy
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="unitTbody" data-ng-repeat="tableData in tableRespModel.listViewData | filter: filter | filter:search | startFrom:(currentPage-1)*itemsPerPage | limitTo:itemsPerPage" data-ng-switch on="dayDataCollapse[$index]" style="cursor: pointer;">
+                                                <!-- is-checked="tableData.checked" -->
+                                                <tr data-ng-click="selectTableRow($index, tableData.id);">
+                                                    <!-- isCollapsed=!isCollapsed -->
+                                                    <td>
+                                                        <i class="fa " ng-class="{'fa-minus-circle': dayDataCollapse[$index], 'fa-plus-circle ': !dayDataCollapse[$index]}"></i>
+                                                        <!-- <button ng-click="showDetail()"></button> -->
+                                                        <!-- <i data-ng-show="changeIcon.indexOf(tableData.id) > -1" class="glyphicon glyphicon-chevron-down"></i>
+                                                    <i data-ng-hide="changeIcon.indexOf(tableData.id) > -1" class="glyphicon glyphicon-chevron-right"></i>ng-class="{'glyphicon-chevron-right':!tableRowExpanded, 'glyphicon-chevron-left':tableRowExpanded}" ng-class="testing"  ng-class="data.folderClass" ng-click="toggleChildren(data)"  -->
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.id}}.
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.unitdocId}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.unitCode}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.location}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.type}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.material}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.width * tableData.unit.height}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.ratesqft}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.chargesMonthly}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.avability}}
+                                                    </td>
+                                                    <td>
+                                                        {{tableData.unit.display}}
+                                                    </td>
+                                                    <td>
+                                                        <!--  <span class="label label-sm label-success">
+                                            Approved </span> -->
+                                                        <uib-progressbar class="progress-striped active" value="tableData.unit.occupancy" type="{{valuetype}}" max="100">{{tableData.unit.occupancy}}%</uib-progressbar>
+                                                    </td>
+                                                </tr>
+                                                <tr data-ng-switch-when="true" class="sub-data-td">
+                                                    <td colspan="14" class="">
+                                                        <div class="span9">
+                                                            <div class="pull-rightt">
+                                                                <div class="row">
+                                                                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                                                                        <div class="image-box box-shadow" ng-repeat="subtableData in tableData track by tableData.id">
+                                                                            <img src="{{subtableData.image.image}}" alt="{{subtableData.image.city}}/{{subtableData.image.unitCode}}" class="img-responsive" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                                                                        <div class="row">
+                                                                            <div ng-repeat="subtableData in tableData">
+                                                                                <div class="col-md-4 subkeysValues" ng-repeat="(key, value) in subtableData.data">
+                                                                                    <h4 class="text-center"><b>{{key}}:</b><br /><span> {{value}}</span></h4>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            <div class="col-md-4 col-md-offset-8">
+                                <ul class="pull-right" uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portlet-body" ng-if="layoutChoose!==true">
+                        <div class="col-md-2 col-sm-2 col-xs-1" style="display:inline-flex; line-height: 1.8;">
+                            Show&nbsp;
+                            <select class="bs-select form-control" ng-model="tileSelect" ng-change="setTileItemsPerPage(tileSelect)" style="height: 23px; padding: 0px;">
+                                <option value=4 selected>4</option>
+                                <option value=5>8</option>
+                                <option value=10>12</option>
+                                <option value=20>16</option>
+                                <option value=30>20</option>
+                                <option value=40>24</option>
+                                <option value=50>28</option>
+                            </select>&nbsp;Entries
+                        </div>
+                        <div class="col-md-3 col-md-offset-7 col-sm-3 col-sm-offset-6 col-xs-12 col-xs-offset-0" style="margin-bottom: 15px;">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                                <input type="text" placeholder="Search.." ng-model="tilesearch" class="form-control" />
+                            </div>
+                        </div>
+                        <p class="lead" ng-show="(tableRespModel.listViewData | filter:tilesearch).length == 0">No Data Found !</p>
+                        <div class="row">
+                                <div class="col-md-3" ng-repeat="tableData in tableRespModel.listViewData | filter: filter | filter:tilesearch | startFrom:(currentTilePage-1)*tileItemsPerPage | limitTo:tileItemsPerPage">
+                                    <div class="tileViewBox hover-effect">
+                                        <div class="tileViewBox-head">
+                                            <h5><b>Unit Code:</b> <span>
+                                            {{tableData.unit.unitdocId}} </span>
+                                            </h5>
+                                            <div class="image-box" ng-repeat="subtableData in tableData track by tableData.id">
+                                                <img src="{{subtableData.image.image}}" alt="{{subtableData.image.city}}/{{subtableData.image.unitCode}}" class="img-responsive" />
+                                            </div>
+                                            <ul class="tileViewBox-content location-content list-unstyled">
+                                                <li>
+                                                    <b>Location: </b> <span>{{tableData.unit.location}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="tileViewBox-content keyValue-section list-unstyled" ng-repeat="subtableData in tableData">
+                                                <li class="col-md-6" ng-repeat="(key, value) in subtableData.data" style="   ">
+                                                    <b>{{key}}:</b>
+                                                    <br /><span> {{value}}</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tileViewBox-footer">
+                                                <!--   <a href="#" class="btn yellow-crusta" style="background-color: #f7931e;">
+                                            View Details</a>
+
+                                            <a href="#" class="btn green-persian" style="background-color: #00a99d;">
+                                            View History</a> -->
+                                                <div class="row">
+                                                    <div class="col-md-6" style="margin-top: 15px;">
+                                                        <a href="#" class=" btn carrot-orange yellow-crusta">
+                                            View Details</a></div>
+                                                    <div class="col-md-6" style="margin-top: 15px;">
+                                                        <a href="#" class="btn green-persian">
+                                            View History</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="col-md-4 col-md-offset-8">
+                                <ul class="pull-right" uib-pagination total-items="totaltileItems" ng-model="currentTilePage" items-per-page="tileItemsPerPage"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT -->
+	
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+	<div class="page-footer-inner">
+		 2017 &copy; OMMS by proliifcgeeks.com
+	</div>
+	<div class="scroll-to-top">
+		<i class="icon-arrow-up"></i>
+	</div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="../../assets/global/plugins/respond.min.js"></script>
+<script src="../../assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="../../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="../../assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="../../assets/global/plugins/bootstrap-daterangepicker/moment.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+<script src="../../assets/global/plugins/bootstrap-switch/js/angular-ui-switch.js"></script>
+<script src="../../assets/admin/layout/scripts/Datatable-json.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="../../assets/global/scripts/Omms.js" type="text/javascript"></script>
+<script src="../../assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="../../assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+
+<script src="../../assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+
+
+
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+jQuery(document).ready(function() {    
+   Omms.init(); // init Omms core componets
+   Layout.init(); // init layout
+   QuickSidebar.init(); // init quick sidebar
+   Demo.init(); // init demo features 
+});
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
