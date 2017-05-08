@@ -47,6 +47,10 @@ div.checker input {
     padding: 15px;
 }
 
+.sub-data-td {
+    border: 1px solid #ccc;
+}
+
 .box-shadow {
     border: 1px solid transparent!important;
     -webkit-box-shadow: 0 3px 7px 0 #a8a8a8!important;
@@ -55,18 +59,30 @@ div.checker input {
 }
 
 .subkeysValues h4 > b {
-    font-size: 14px;
+    color: #333;
+    font-size: 13px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .subkeysValues h4 > span {
-    color: #d6b897 !important;
-    font-size: 14px;
+    /*color: #d6b897 !important;*/
+    color: #999 !important;
+    font-size: 12px;
     font-weight: 600;
 }
 
 .gridView .image-box {
-    margin-top: 10%;
+    /*margin-top: 10%;*/
+    width: 325px;
+    height: 300px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.gridView .image-box img {
+    /*margin-top: 25%;*/
+    border: 1px solid #ccc;
 }
 
 
@@ -78,10 +94,8 @@ div.checker input {
     padding-left: 15px;
 }
 
-.tileViewBox-head b {}
-
 .image-box {
-    border-top: 1px solid #ddd;
+    /*border-top: 1px solid #ddd;*/
 }
 
 .tileViewBox-head h5 span {
@@ -89,10 +103,27 @@ div.checker input {
     font-weight: 400;
 }
 
-.tileViewBox-content.location-content {
+
+/*.tileViewBox-content.location-content {
     margin-bottom: 0px;
     border-bottom: 0px;
+}*/
+
+.tileViewBox-content.location-content {
+    height: 60px;
+    vertical-align: middle;
+    padding: 2px;
+    display: flex;
+    background: #ddd;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
 }
+
+
+/*.colmd-location span{
+    color: #999 !important;
+}*/
 
 .tileViewBox-content.location-content li {
     padding: 15px;
@@ -117,12 +148,17 @@ div.checker input {
 }
 
 .tileViewBox-content.keyValue-section > li > b {
-    font-size: 14px;
+    /*font-size: 14px;*/
+    font-size: 13px;
+    color: #333;
+    text-transform: uppercase;
 }
 
 .tileViewBox-content.keyValue-section > li > span {
-    color: #d6b897 !important;
-    font-size: 14px;
+    /*color: #d6b897 !important;
+     font-size: 14px;*/
+    color: #999 !important;
+    font-size: 12px;
 }
 
 .carrot-orange.btn {
