@@ -1,177 +1,263 @@
-.switchCheckbox > div.checker,
-div.checker span,
-div.checker input {
-    display: none!important;
-}
-
-.tabbable-line .form-group {
-    display: inline-flex;
-}
-
-.tabbable-line label {
-    line-height: 2.3;
-}
-
-.full-btn-width {
-    width: 100%;
-}
-
-.list-view td {
-    /*padding: 15px;*/
-    text-transform: capitalize;
-    border-top: 0px!important;
-    /* padding:15px!important; */
-}
-
-.list-view .table-scrollable {
-    border: 0px !important;
-}
-
-.list-view th {
-    text-transform: uppercase !important;
-    font-weight: 700 !important;
-    font-size: 11px!important;
-}
-
-.unitTbody {
-    cursor: pointer;
-}
-
-.unitTbody td i {
-    /*line-height: 2.4;*/
-    padding: 5px;
-    font-size: 17px;
-}
-
-.sub-data-td .row {
-    padding: 15px;
-}
-
-.sub-data-td {
-    border: 1px solid #ccc;
-}
-
-.box-shadow {
-    border: 1px solid transparent!important;
-    -webkit-box-shadow: 0 3px 7px 0 #a8a8a8!important;
-    -moz-box-shadow: 0 3px 7px 0 #a8a8a8!important;
-    box-shadow: 0 3px 7px 0 #a8a8a8!important;
-}
-
-.subkeysValues h4 > b {
-    color: #333;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.subkeysValues h4 > span {
-    /*color: #d6b897 !important;*/
-    color: #999 !important;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.gridView .image-box {
-    /*margin-top: 10%;*/
-    width: 325px;
-    height: 300px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.gridView .image-box img {
-    /*margin-top: 25%;*/
-    border: 1px solid #ccc;
-}
-
-
-/*start tile-view css*/
-
-.tileViewBox-head h5 {
-    text-align: left;
-    padding: 5px;
-    padding-left: 15px;
-}
-
-.image-box {
-    /*border-top: 1px solid #ddd;*/
-}
-
-.tileViewBox-head h5 span {
-    color: #181818 !important;
-    font-weight: 400;
-}
-
-
-/*.tileViewBox-content.location-content {
+    .switchCheckbox > div.checker,
+    div.checker span,
+    div.checker input {
+        display: none!important;
+    }
+    
+    .tabbable-line .form-group {
+        display: inline-flex;
+    }
+    
+    .tabbable-line label {
+        line-height: 2.3;
+    }
+    
+    .full-btn-width {
+        width: 100%;
+    }
+    
+    .showEntries {
+        display: inline-flex;
+        line-height: 1.8;
+    }
+    
+    .list-view td {
+        /*padding: 15px;*/
+        text-transform: capitalize;
+        border-top: 0px!important;
+        /* padding:15px!important; */
+    }
+    
+    .list-view .table-scrollable {
+        border: 0px !important;
+    }
+    
+    .list-view th {
+        text-transform: uppercase !important;
+        font-weight: 700 !important;
+        font-size: 11px!important;
+    }
+    
+    .unitTbody {
+        cursor: pointer;
+    }
+    
+    .unitTbody td i {
+        /*line-height: 2.4;*/
+        padding: 5px;
+        font-size: 17px;
+    }
+    
+    .sub-data-td .row {
+        padding: 15px;
+    }
+    
+    .sub-data-td {
+        border: 1px solid #ccc;
+    }
+    
+    .box-shadow {
+        border: 1px solid transparent!important;
+        -webkit-box-shadow: 0 3px 7px 0 #a8a8a8!important;
+        -moz-box-shadow: 0 3px 7px 0 #a8a8a8!important;
+        box-shadow: 0 3px 7px 0 #a8a8a8!important;
+    }
+    
+    .subkeysValues h4 > b {
+        color: #333;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    .subkeysValues h4 > span {
+        /*color: #d6b897 !important;*/
+        color: #999 !important;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .gridView .image-box {
+        /*margin-top: 10%;*/
+        width: 325px;
+        height: 300px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    .gridView .image-box img {
+        /*margin-top: 25%;*/
+        border: 1px solid #ccc;
+    }
+    /*start tile-view css*/
+    
+    .tileViewBox-head h5 {
+        text-align: left;
+        padding: 5px;
+        padding-left: 15px;
+    }
+    
+    .image-box {
+        /*border-top: 1px solid #ddd;*/
+    }
+    
+    .tileViewBox-head h5 span {
+        color: #181818 !important;
+        font-weight: 400;
+    }
+    /*.tileViewBox-content.location-content {
     margin-bottom: 0px;
     border-bottom: 0px;
 }*/
-
-.tileViewBox-content.location-content {
-    height: 60px;
-    vertical-align: middle;
-    padding: 2px;
-    display: flex;
-    background: #ddd;
-    flex-direction: column;
-    justify-content: center;
-    overflow-y: auto;
-}
-
-
-/*.colmd-location span{
+    
+    .tileViewBox-content.location-content {
+        height: 60px;
+        vertical-align: middle;
+        padding: 2px;
+        display: flex;
+        background: #ddd;
+        flex-direction: column;
+        justify-content: center;
+        overflow-y: auto;
+    }
+    /*.colmd-location span{
     color: #999 !important;
 }*/
-
-.tileViewBox-content.location-content li {
-    padding: 15px;
-    background: #f2f2f2;
-    text-align: left;
-}
-
-.tileViewBox-content.location-content li > b {
-    color: #000;
-    font-size: 15px;
-}
-
-.tileViewBox-content.location-content > li > span {
-    color: #181818;
-    font-weight: 400;
-    font-size: 14px;
-}
-
-.tileViewBox-content.keyValue-section > li {
-    text-transform: capitalize;
-    border: 1px solid #e7e7e7;
-}
-
-.tileViewBox-content.keyValue-section > li > b {
-    /*font-size: 14px;*/
-    font-size: 13px;
-    color: #333;
-    text-transform: uppercase;
-}
-
-.tileViewBox-content.keyValue-section > li > span {
-    /*color: #d6b897 !important;
+    
+    .tileViewBox-content.location-content li {
+        padding: 15px;
+        background: #f2f2f2;
+        text-align: left;
+    }
+    
+    .tileViewBox-content.location-content li > b {
+        color: #000;
+        font-size: 15px;
+    }
+    
+    .tileViewBox-content.location-content > li > span {
+        color: #181818;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    .tileViewBox-content.keyValue-section > li {
+        text-transform: capitalize;
+        border: 1px solid #e7e7e7;
+    }
+    
+    .tileViewBox-content.keyValue-section > li > b {
+        /*font-size: 14px;*/
+        font-size: 13px;
+        color: #333;
+        text-transform: uppercase;
+    }
+    
+    .tileViewBox-content.keyValue-section > li > span {
+        /*color: #d6b897 !important;
      font-size: 14px;*/
-    color: #999 !important;
-    font-size: 12px;
-}
-
-.carrot-orange.btn {
-    background-color: #f7931e;
-    border: 1px solid #ddd;
-    color: #fff;
-}
-
-.green-persian.btn {
-    background-color: #00a99d;
-    color: #fff;
-    border: 1px solid #ddd;
-}
-
-
-/*end tile-view css*/
+        color: #999 !important;
+        font-size: 12px;
+    }
+    
+    .carrot-orange.btn {
+        background-color: #f7931e;
+        border: 1px solid #ddd;
+        color: #fff;
+    }
+    
+    .green-persian.btn {
+        background-color: #00a99d;
+        color: #fff;
+        border: 1px solid #ddd;
+    }
+    /*end tile-view css*/
+    /*==========  Mobile First Method  ==========*/
+    /* Custom, iPhone Retina */
+    
+    @media only screen and (max-width: 320px) {
+        .showEntries {
+            margin: 15px 0px 15px 0px !important;
+            line-height: 2.9 !important;
+        }
+        .showEntries select {
+            height: 34px !important;
+        }
+        .list-view td {
+            font-size: 11px !important;
+        }
+        .list-view tr th {
+            font-size: 11px !important;
+        }
+        .subkeysValues h4 > b {
+            color: #333;
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+        }
+        .subkeysValues h4 > span {
+            color: #999 !important;
+            font-size: 11px !important;
+            font-weight: 600;
+        }
+        .gridView .image-box {
+            /* margin-top: 10%; */
+            width: 250px !important;
+            height: 251px !important;
+            border: 1px solid #ccc !important;
+            box-sizing: border-box !important;
+            float: right !important;
+        }
+        .tileViewBox-head h5 > b,
+        .tileViewBox-head h5 > span {
+            font-size: 11px;
+        }
+        .colmd-location b,
+        .colmd-location span {
+            font-size: 11px;
+        }
+        .tileViewBox-head h5 {
+            padding: 0px 0px 0px 15px;
+        }
+        .tileViewBox-content.keyValue-section > li > b {
+            /* font-size: 14px; */
+            font-size: 11px;
+            color: #333;
+            text-transform: uppercase;
+        }
+        .tileViewBox-content.keyValue-section > li > span {
+            color: #999 !important;
+            font-size: 11px;
+        }
+        .carrot-orange.btn {
+            background-color: #f7931e;
+            border: 1px solid #ddd;
+            color: #fff;
+            font-size: 11px;
+        }
+        .green-persian.btn {
+            background-color: #00a99d;
+            color: #fff;
+            border: 1px solid #ddd;
+            font-size: 11px;
+        }
+        .tileViewBox-footer {
+            color: #777;
+            font-size: 11px;
+            line-height: 17px;
+            text-align: center;
+            padding: 0px 15px 15px;
+        }
+    }
+    /* Extra Small Devices, Phones */
+    
+    @media only screen and (min-width: 480px) {}
+    /* Small Devices, Tablets */
+    
+    @media only screen and (min-width: 768px) {}
+    /* Medium Devices, Desktops */
+    
+    @media only screen and (min-width: 992px) {}
+    /* Large Devices, Wide Screens */
+    
+    @media only screen and (min-width: 1200px) {}
