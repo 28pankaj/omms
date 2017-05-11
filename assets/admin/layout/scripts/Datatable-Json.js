@@ -1,5 +1,5 @@
 /**
- * myapp Module
+ * unitListApp Module
  *
  * Description
  */
@@ -17,19 +17,7 @@ myappvariable.filter('startFrom', function() {
 
 );
 myappvariable.controller('list_view_ctrl', ['$scope', '$filter', '$http', 'filterFilter', function($scope, $filter, $http, filterFilter) {
-        // $http.get("../../listUnitJsonData.json").then(function(response) {
-        //     $scope.tableRespModel.listViewData = response;
-        //     console.log(response);
-        // });
-        // // $http({
-        // //     method: 'GET',
-        // //     url: '../../listUnitJsonData.json'
-        // // }).then(function successCallback(response) {
-        // //     $scope.tableRespModel = response;
-        // //     console.log(response);
-        // // }, function errorCallback(response) {
-        // //     $scope.tableRespModel = "Something went wrong";
-        // // });
+
         $scope.layoutChoose = true;
         $scope.max = 100;
         $scope.randomType = function(value) {
@@ -52,6 +40,8 @@ myappvariable.controller('list_view_ctrl', ['$scope', '$filter', '$http', 'filte
         };
         $scope.randomType();
         $scope.list = [];
+        $scope.tableRespModel = [];
+
         $scope.tableRespModel = {
             "listViewData": [{
                 "unit": {
@@ -353,6 +343,7 @@ myappvariable.controller('list_view_ctrl', ['$scope', '$filter', '$http', 'filte
             console.log($scope.totaltileItems);
             $scope.noOfPages = Math.ceil($scope.totaltileItems / $scope.tileItemsPerPage);
             $scope.currentTilePage = 1;
+            //$scope.gridsearch = '';
         }, true);
         // end tile filter settings
         $scope.oldTempData = $scope.tableRespModel.listViewData;
@@ -362,33 +353,49 @@ myappvariable.controller('list_view_ctrl', ['$scope', '$filter', '$http', 'filte
 
                 if ($scope.layoutChoose == true) {
                     $scope.totalItems = $scope.oldTempData.length;
-                }
-                if ($scope.layoutChoose == !true) {
+
+                } else {
                     $scope.totaltileItems = $scope.oldTempData.length;
                 }
             } else {
                 $scope.tableRespModel.listViewData = $filter('filter')($scope.oldTempData, filterSelectCity, undefined);
                 if ($scope.layoutChoose == true) {
                     $scope.totalItems = $scope.tableRespModel.listViewData.length;
-                }
-                if ($scope.layoutChoose == !true) {
+                } else {
                     $scope.totaltileItems = $scope.tableRespModel.listViewData.length;
                 }
 
                 console.log($scope.tableRespModel.listViewData);
             }
         }
+
         $scope.searchChange = function(changeSearchfun) {
             console.log(changeSearchfun);
             $scope.tableRespModel.listViewData = $filter('filter')($scope.oldTempData, changeSearchfun, undefined);
+
             if ($scope.layoutChoose == true) {
                 $scope.totalItems = $scope.tableRespModel.listViewData.length;
-            }
-            if ($scope.layoutChoose == !true) {
+                //console.log($scope.oldTempData);
+
+            } else {
                 $scope.totaltileItems = $scope.tableRespModel.listViewData.length;
             }
-
         }
+
+        $scope.switchClick = function(switchVal) {
+            console.log(switchVal);
+            if (switchVal == false) {
+                $scope.gridsearch = '';
+                $scope.tableRespModel.listViewData = $scope.oldTempData;
+                $scope.totaltileItems = $scope.tableRespModel.listViewData.length;
+            } else {
+                $scope.tilesearch = '';
+                $scope.tableRespModel.listViewData = $scope.oldTempData;
+                console.log($scope.oldTempData);
+                $scope.totalItems = $scope.tableRespModel.listViewData.length;
+            }
+        }
+
     }
 
 ]);

@@ -477,7 +477,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12 tabbable-line">
                             <div class="form-group">
                                 <label>Tile&nbsp;</label>
-                                <switch name="layoutChoose" ng-model="layoutChoose" class="switchCheckbox"></switch>
+                                <switch name="layoutChoose" ng-model="layoutChoose" ng-change="switchClick(layoutChoose)" class="switchCheckbox"></switch>
                                 <label>&nbsp;Grid</label>
                                 <!-- on="Grid" off="Tile"  -->
                             </div>
@@ -488,7 +488,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="portlet-body" ng-if="layoutChoose==true">
+                    <div class="portlet-body" ng-if="layoutChoose==true" ng-model="layoutSearchRem">
                         <div class="row">
                             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 showEntries">
                                 Show&nbsp;
@@ -510,7 +510,7 @@
                                     <input type="text" placeholder="Search.." ng-model="gridsearch" class="form-control" ng-change="searchChange(gridsearch)" />
                                 </div>
                             </div>
-                            <p class="lead" ng-show="(tableRespModel.listViewData | filter:gridsearch).length == 0">No Data Found in {{filterSelectCity}}!</p>
+                            <p class="lead" ng-show="(tableRespModel.listViewData | filter:gridsearch).length == 0">No Data Found in {{filterSelectCity}}!</p><!--  ng-model="noDataPara" ng-show="paraContain"-->
                         </div>
                         <div class="row">
                             <div class="col-md-12 gridView">
@@ -671,8 +671,8 @@
                                     <input type="text" placeholder="Search.." class="form-control" ng-model="tilesearch" ng-change="searchChange(tilesearch)" />
                                 </div>
                             </div>
+                            <p class="lead" ng-show="(tableRespModel.listViewData | filter:tilesearch).length == 0">No Data Found in {{filterSelectCity}}!</p>
                         </div>
-                        <p class="lead" ng-show="(tableRespModel.listViewData | filter:tilesearch).length == 0">No Data Found !</p>
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="tableData in tableRespModel.listViewData | filter: (!!filterSelectCity || undefined) && filterSelectCity | filter:tilesearch | startFrom:(currentTilePage-1)*tileItemsPerPage | limitTo:tileItemsPerPage">
                                 <div class="tileViewBox hover-effect">
